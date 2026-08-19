@@ -1,0 +1,37 @@
+Algoritmo "Teste"
+// Descrição   : Exercicio 14
+// Autor(a)    : Herbert de Alencar Guarezi
+// Autor(a)    : Bruno Fernando Duarte
+// Data atual  : 18/08/2026
+Var
+// Seção de Declarações das variáveis
+nome: caracter
+salarioBruto, qtdHorasTrab, valorHoraExtra, percInss, percPnoSde: Real
+totalHEx, descInss, descPno, totalDesc, salarioLqd, salarioAnual: Real
+Inicio
+// Entrada de Dados
+escreva("Digite o nome do funcionário: ")
+leia(nome)
+escreva("Digite o salário bruto: ")
+leia(salarioBruto)
+escreva("Digite a quantidade de horas trabalhadas: ")
+leia(qtdHorasTrab)
+escreva("Digite o valor da hora extra: ")
+leia(valorHoraExtra)
+escreva("Digite desconto do Inss: ")
+leia(percInss)
+escreva("Digite o desconto do Plano de Saúde: ")
+leia(percPnoSde)
+
+
+// Processamento
+totalHEx <- ValorHoraExtra * qtdHorasTrab
+descInss <- salario - (salario * (descInss/100))
+descPno <- salario -  (salario * (percPnoSde
+
+// Saida de Dados
+
+
+
+
+Fimalgoritmo
