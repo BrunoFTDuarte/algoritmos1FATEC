@@ -1,37 +1,46 @@
 Algoritmo "Teste"
-// Descrição   : Exercicio 14
+// Descrição   : Exercicio 15
 // Autor(a)    : Herbert de Alencar Guarezi
 // Autor(a)    : Bruno Fernando Duarte
 // Data atual  : 18/08/2026
 Var
 // Seção de Declarações das variáveis
-nome: caracter
-salarioBruto, qtdHorasTrab, valorHoraExtra, percInss, percPnoSde: Real
-totalHEx, descInss, descPno, totalDesc, salarioLqd, salarioAnual: Real
+precoComputador, precoMonitor, precoTeclado, precoMouse, percDesconto, percImposto, qtdParcelas: Real
+imposto, subtotal, desconto, precoDesconto, precoImposto, precoFim, precoParcela, diferenca: Real
 Inicio
 // Entrada de Dados
-escreva("Digite o nome do funcionário: ")
-leia(nome)
-escreva("Digite o salário bruto: ")
-leia(salarioBruto)
-escreva("Digite a quantidade de horas trabalhadas: ")
-leia(qtdHorasTrab)
-escreva("Digite o valor da hora extra: ")
-leia(valorHoraExtra)
-escreva("Digite desconto do Inss: ")
-leia(percInss)
-escreva("Digite o desconto do Plano de Saúde: ")
-leia(percPnoSde)
-
+escreva("Digite o preço do computador: ")
+leia(precoComputador)
+escreva("digite o preço do monitor: ")
+leia(precoMonitor)
+escreva("digite o preço do teclado: ")
+leia(precoTeclado)
+escreva("digite o preço do mouse: ")
+leia(precoMouse)
+escreva("digite o desconto dado: ")
+leia(percDesconto)
+escreva("digite o percentual do imposto: ")
+leia(percImposto)
+escreva("digite a quantidade de parcelas a pagar: ")
+leia(qtdParcelas)
 
 // Processamento
-totalHEx <- ValorHoraExtra * qtdHorasTrab
-descInss <- salario - (salario * (descInss/100))
-descPno <- salario -  (salario * (percPnoSde
+subtotal <- (precoComputador + precoMonitor + precoTeclado + precoMouse + precoDesconto)
+escreval("O preço total fica ", subtotal)
+desconto <- (subtotal * (percDesconto/100))
+escreval("O desconto é de ", desconto)
+precoDesconto <- (subtotal - desconto)
+escreval("O preço com desconto fica ", precoDesconto)
+imposto <- (subtotal * (percImposto/100))
+escreval("O imposto é de ", imposto)
+precoFim <- (precoDesconto + imposto)
+escreval("O preço com desconto e com os insumos é de ", precoFim)
+
+// diferenca <- escreval("A DIFERENÇA ENTRE O PREÇO FINAL E O INICIAL É DE", diferenca)
 
 // Saida de Dados
-
-
+// escreval("O preço total ficou em R$", )
+// escreval("Podendo ser parcelado em até", qtdParcelas, " parcelas de", precoParcela, " cada")
 
 
 Fimalgoritmo
