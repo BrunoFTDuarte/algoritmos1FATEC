@@ -1,0 +1,46 @@
+Algoritmo "Teste"
+// Descrição   : Exercicio 15
+// Autor(a)    : Herbert de Alencar Guarezi
+// Autor(a)    : Bruno Fernando Duarte
+// Data atual  : 18/08/2026
+Var
+// Seção de Declarações das variáveis
+precoComputador, precoMonitor, precoTeclado, precoMouse, percDesconto, percImposto, qtdParcelas: Real
+imposto, subtotal, desconto, precoDesconto, precoImposto, precoFim, precoParcela, diferenca: Real
+Inicio
+// Entrada de Dados
+escreva("Digite o preço do computador: ")
+leia(precoComputador)
+escreva("digite o preço do monitor: ")
+leia(precoMonitor)
+escreva("digite o preço do teclado: ")
+leia(precoTeclado)
+escreva("digite o preço do mouse: ")
+leia(precoMouse)
+escreva("digite o desconto dado: ")
+leia(percDesconto)
+escreva("digite o percentual do imposto: ")
+leia(percImposto)
+escreva("digite a quantidade de parcelas a pagar: ")
+leia(qtdParcelas)
+
+// Processamento
+subtotal <- (precoComputador + precoMonitor + precoTeclado + precoMouse + precoDesconto)
+escreval("O preço total fica ", subtotal)
+desconto <- (subtotal * (percDesconto/100))
+escreval("O desconto é de ", desconto)
+precoDesconto <- (subtotal - desconto)
+escreval("O preço com desconto fica ", precoDesconto)
+imposto <- (subtotal * (percImposto/100))
+escreval("O imposto é de ", imposto)
+precoFim <- (precoDesconto + imposto)
+escreval("O preço com desconto e com os insumos é de ", precoFim)
+
+// diferenca <- escreval("A DIFERENÇA ENTRE O PREÇO FINAL E O INICIAL É DE", diferenca)
+
+// Saida de Dados
+// escreval("O preço total ficou em R$", )
+// escreval("Podendo ser parcelado em até", qtdParcelas, " parcelas de", precoParcela, " cada")
+
+
+Fimalgoritmo
