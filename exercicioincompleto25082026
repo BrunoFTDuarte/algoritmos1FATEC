@@ -1,0 +1,58 @@
+Algoritmo "Teste"
+// Descrição   : Exercicio
+// Autor(a)    : Herbert de Alencar Guarezi
+// Autor(a)    : Bruno Fernando Duarte
+// Data atual  : 25/08/2026
+
+
+Var
+// Seção de Declarações das variáveis
+ME, MA, nota1, nota2, nota3: real
+nome: caractere
+
+Inicio
+
+// Entrada de Dados
+
+escreva("Escreva o nome do aluno: ")
+leia(nome)
+escreva("Digite a primeira nota: ")
+leia(nota1)
+escreva("Digite a segunda nota: ")
+leia(nota2)
+escreva("Digite a terceira nota: ")
+leia(nota3)
+escreva("Digite a média dos exercícios: ")
+leia(ME)
+
+// Processamento
+escreval("O aluno: ", nome)
+escreval("Com as respectivas notas: ", nota1, nota2, nota3)
+escreval("E a respectiva média nos exercícios: ", ME)
+escreval("Obteve o seguinte resultado: ")
+
+MA <- (nota1 + (nota2 * 2) + (nota3 * 3) + ME) /7
+
+se (MA >= 9.0) entao
+    escreva("Sua nota foi A, você foi aprovado!!!")
+fimse
+
+se (MA >= 7.5) entao
+    escreva("Sua nota foi B, você foi aprovado!!")
+fimse
+
+se (MA >= 6.0) entao
+    escreva("Sua nota foi C, você foi aprovado!")
+fimse
+
+se (MA >= 4.0) entao
+    escreva("Sua nota foi D, você foi reprovado.")
+fimse
+
+se (MA < 4.0) entao
+    escreva("Sua nota foi E, você foi reprovado.")
+fimse
+// Saida de Dados
+
+Fimalgoritmo
+
