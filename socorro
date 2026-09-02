@@ -1,0 +1,49 @@
+Algoritmo "Teste"
+// Descrição : Exercicio
+// Autor(a)  : Herbert de Alencar Guarezi
+// Autor(a)  : Bruno Fernando Duarte
+// Data atual : 25/08/2026
+
+Var
+qtdPassageiros: Inteiro
+peso, pesoMax distancia: Real
+tipoCombustivel, autorizado: caractere
+
+Inicio
+   // Entrada de Dados
+escreva("Insira o peso da carga total: ")
+leia(peso)
+escreva("Insira o tipo de combustível: ")
+escreval("[A] Alfa | [B] Beta ")
+leia(tipoCombustivel)
+escreva("Insira a distância em Anos-Luz: ")
+leia(distancia)
+escreva("Insira a quantidade de passageiros, sendo o máximo de 3 pessoas: ")
+leia(qtdPassageiros)
+   
+   // Processamento
+
+
+   //Validamento de peso máximo para cada combustivel
+
+
+   //Combustivel A SEMPRE terá o peso máximo de 50
+    se (combustivel =  "A") entao
+        pesoMax = 50.0
+    senao
+    //O combustível B, com a distância menor que 5 terá seu peso máximo de 80
+        se (combustivel = "B") e (distancia < 5) entao
+            pesoMax = 80
+        //Se a distância ter seu valor maior de 5, seu peso máximo será de 40.
+        senao
+            pesoMax = 40
+        fimse
+    fimse
+
+
+//Regra para validar o peso máximo
+se (peso > pesoMax) entao
+    
+
+   // Saída de dados
+Fimalgoritmo
