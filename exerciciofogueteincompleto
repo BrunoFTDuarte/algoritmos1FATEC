@@ -1,0 +1,81 @@
+algoritmo "Despacho_Carga_Espacial"
+("// Disciplina  : Algoritmos e Lógica de Programação
+// Descrição   : Valida missão espacial usando apenas estruturas condicionais
+
+// Data atual  : 01/09/2026
+
+var
+   peso, distancia, limite_peso, civis,autorizada : real
+     combustivel : caractere
+
+inicio
+   // --- PASSO 1: ENTRADA DE DADOS ---
+  escreval("--- SISTEMA DE DESPACHO ESPACIAL ---")
+   escreva("Digite o peso da carga (em toneladas): ")
+   leia(peso)
+   escreva("Digite o tipo de combustível (A/B): ")
+   leia(combustivel)
+   escreva("Digite a distância do destino (em anos-luz): ")
+   leia(distancia)
+   escreva("quantidade de civis?  ")
+   leia(civis)
+
+
+   // Inicializamos a variável de controle como VERDADEIRO.
+   // Se o algoritmo encontrar qualquer irregularidade, mudamos para FALSO.
+   autorizada := 1
+
+   // --- PASSO 2: DEFINIÇÃO DO LIMITE DE PESO (Regra 1) ---
+   se (combustivel = "A") entao
+      limite_peso := 50.0
+   senao
+      se (combustivel = "B") e (distancia <= 5.0) entao
+         limite_peso := 80.0
+      senao
+         limite_peso := 40.0
+      fimse
+   fimse
+
+   // --- PASSO 3: AVALIAÇÃO DAS REGRAS RESTRITIVAS ---
+
+   // Validação do Peso Máximo (Regra 1)
+   se (peso > limite_peso) entao
+      autorizada := 1
+   fimse
+
+   // Regra de Distância Extrema (Regra 2)
+   se (distancia > 15.0) e (civis <>0 ) entao
+      autorizada := 1
+   fimse
+
+   // Regra de Eficiência (Regra 3)
+   se (distancia < 2.0) entao
+      // Se for menor que 2, obrigatoriamente deve ser 'A'
+      // Exceção: se peso > 45 E combustível for 'B' E NÃO houver civis, é permitido.
+      // Portanto, gera erro se for 'B' e NÃO cumprir a exceção.
+      se (combustivel = "B") então
+         se nao ((peso > 45.0) e (civis <> 0)) entao
+            autorizada := 0
+         fimse
+      fimse
+   fimse
+
+   // Regra de Segurança Máxima (Regra 4)
+   se (peso = limite_peso) e (civis = 0) entao
+      autorizada := 0
+   fimse
+
+
+   // --- PASSO 4: EMISSÃO DO VEREDITO FINAL ---
+   escreval("")
+   escreval("---------------------------------------")
+   se (autorizada = 0) entao
+      escreval("STATUS: MISSÃO AUTORIZADA")
+      escreval("Boa viagem ao espaço!")
+   senao
+      escreval("STATUS: MISSÃO ABORTADA")
+      escreval("Os critérios de segurança não foram satisfeitos.")
+   fimse
+   escreval("---------------------------------------")
+
+fimalgoritmo
